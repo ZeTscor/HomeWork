@@ -5,8 +5,6 @@ import com.codeborne.selenide.SelenideElement;
 
 import java.io.File;
 
-import zets.pages.CalendarPage.*;
-
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
@@ -24,15 +22,15 @@ public class RegistrationPage {
             uploadPictureField = $("#uploadPicture"),
             addressInput = $("#currentAddress"),
             listOfStates = $("#state"),
-            stateInput =$("#react-select-3-input"),
+            stateInput = $("#react-select-3-input"),
             cityList = $("#city"),
-            cityInput =$("#react-select-4-input"),
+            cityInput = $("#react-select-4-input"),
             submitRegistrationButton = $("#submit"),
             successfulText = $(byText("Thanks for submitting the form")),
             resultsTable = $(".table-responsive");
 
 
-    public CalendarPage calndar = new CalendarPage();
+    public CalendarComponent calndar = new CalendarComponent();
 
 
     public RegistrationPage openPage() {
@@ -76,8 +74,8 @@ public class RegistrationPage {
         return this;
     }
 
-    public RegistrationPage uploadPicture() {
-        uploadPictureField.uploadFile(new File("src/test/resources/1.png"));
+    public RegistrationPage uploadPicture(String path) {
+        uploadPictureField.uploadFile(new File(path));
         return this;
     }
 
