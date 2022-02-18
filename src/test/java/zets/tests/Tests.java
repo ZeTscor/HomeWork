@@ -7,7 +7,7 @@ import static java.lang.Thread.sleep;
 
 public class Tests extends TestBase {
     @Test
-     void RegistrationPageTest() throws InterruptedException {
+    void RegistrationPageTest() {
         registrationPage.openPage()
                 .typeFirstName(data.firstName)
                 .typeLatsName(data.lastName)
@@ -25,7 +25,7 @@ public class Tests extends TestBase {
         registrationPage.submitTheForm();
         registrationPage.resultForm("Date of Birth", "22 April,2000");
         registrationPage.resultForm("Gender", data.gender);
-        registrationPage.resultForm("Subjects","Computer Science");
+        registrationPage.resultForm("Subjects", "Computer Science");
         registrationPage.resultForm("State and City", "Haryana Karnal");
 
 

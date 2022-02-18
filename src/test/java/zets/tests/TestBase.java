@@ -7,11 +7,13 @@ import zets.data.TestData;
 
 public class TestBase {
 
-        public TestData data = new TestData();
-        public RegistrationPage registrationPage = new RegistrationPage();
+    public TestData data = new TestData();
+    public RegistrationPage registrationPage = new RegistrationPage();
 
-        @BeforeAll
-        static void beforeAll() { Configuration.startMaximized = true; }
+    @BeforeAll
+    static void beforeAll() {
+        Configuration.startMaximized = true;
     }
+}
 
 

@@ -4,7 +4,7 @@ package zets.data;
 import com.github.javafaker.Faker;
 
 
-public class TestData  {
+public class TestData {
 
     Faker faker = new Faker();
     public String firstName = faker.name().firstName();
